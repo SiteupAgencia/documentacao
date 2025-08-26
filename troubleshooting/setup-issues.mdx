@@ -1,0 +1,27 @@
+---
+title: "Problemas Gerais de Configuração"
+icon: "wrench"
+description: "Solucione problemas comuns de configuração incluindo problemas de resposta da IA, verificação OTP e erros de credenciais"
+---
+
+Algumas armadilhas comuns ao configurar o Autocalls.ai pela primeira vez:
+
+## 1. IA Não Respondendo ou Chamada Caindo
+
+- **Verifique o Prompt do Sistema**: Possivelmente faltam instruções.
+- **Detecção de Atividade de Voz**: Se configurada muito baixa ou alta, pode causar silêncios estranhos ou interrupções.
+- **Conexão**: Se sua internet ou tronco SIP estiver instável, as chamadas podem cair.
+
+## 2. Não Recebendo OTP (para Verificação de ID do Chamador)
+
+- **Bloqueios da Operadora**: Algumas operadoras filtram códigos curtos ou SMS internacionais desconhecidos.
+- **Experimente Método Alternativo**: Pergunte ao suporte se você pode verificar por uma chamada de voz rápida ou outra linha telefônica.
+
+## 3. Erros de Credenciais
+
+- **SIP**: Nome de usuário/senha incorretos? Verifique novamente com seu provedor PBX.
+- **API/Webhooks**: Certifique-se de ter copiado o token correto ou URL do endpoint.
+
+---
+
+**Dica:** Verifique os logs de chamadas para códigos de erro se uma chamada falhar. Geralmente mostrará uma razão como "Número não encontrado" ou "Rede inalcançável".
