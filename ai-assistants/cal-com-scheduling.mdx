@@ -1,0 +1,102 @@
+---
+title: "Agendamento de Compromissos Cal.com"
+icon: "calendar-days"
+description: "Aprenda como habilitar seu assistente de IA para agendar compromissos usando a integração Cal.com"
+---
+
+Habilite seu assistente de IA para agendar reuniões e compromissos perfeitamente usando a integração Cal.com. Este recurso poderoso permite que sua IA verifique disponibilidade e agende reuniões diretamente durante as chamadas.
+
+<Warning>
+  Não torne nenhum campo novo obrigatório nas configurações do evento Cal.com. A
+  integração suporta apenas campos padrão e o campo de telefone opcional. Adicionar
+  campos personalizados obrigatórios fará a integração falhar.
+</Warning>
+
+## Pré-requisitos
+
+Antes de configurar a integração Cal.com, você precisará de:
+
+- Uma conta Cal.com (hospedada ou auto-hospedada)
+- Um tipo de evento configurado no Cal.com
+- Uma chave de API do Cal.com
+
+## Processo de Configuração
+
+### 1. Configuração do Cal.com
+
+1. Inscreva-se ou faça login na sua conta [Cal.com](https://cal.com/)
+2. Crie um novo tipo de evento especificamente para agendamentos do assistente de IA
+   - Dê um nome claro como "Reunião com Assistente de IA"
+   - Configure duração, disponibilidade e outras configurações
+3. Uma vez criado, anote o ID do evento da URL
+   <img height="200" src="/resources/cal-event-id.png" />
+4. Gere uma chave de API:
+   - Vá para as configurações do Cal.com
+   - Navegue para Configurações do Desenvolvedor
+   - Crie uma nova chave de API
+   - Copie e armazene com segurança a chave de API
+
+### 2. Informações de Contato do Cliente
+
+#### Configuração de Email
+
+Para enviar convites de calendário para clientes:
+
+1. Defina `email` nas variáveis de entrada do seu assistente
+2. Passe o email do cliente como a variável `email` ao criar o lead
+3. O sistema usará automaticamente este email para convites de calendário
+
+#### Número de Telefone em Eventos do Calendário
+
+Para incluir o número de telefone do chamador em eventos do calendário:
+
+1. Vá para as configurações do evento no Cal.com
+2. Clique em "Adicionar uma pergunta"
+   <img height="200" src="/resources/cal-event-settings.jpeg" />
+3. Configure o campo com estes valores exatos:
+   - Identificador: `phone` (deve ser exato)
+     <img height="200" src="/resources/cal-phone-field.jpeg" />
+4. Salve suas alterações
+   <img height="200" src="/resources/cal-save.jpeg" />
+
+### 3. Adicionando Cal.com ao Seu Assistente
+
+1. Nas configurações do seu assistente de IA, localize a seção Ferramentas
+2. Adicione a integração Cal.com
+3. Configure a ferramenta com:
+   - Sua chave de API do Cal.com
+   - O ID do tipo de evento
+     <img height="200" src="/resources/cal-tool.png" />
+
+## Melhores Práticas
+
+- Crie tipos de eventos dedicados para agendamentos de IA para rastrear seu uso
+- Defina tempos de pausa claros entre reuniões
+- Configure durações apropriadas de reunião
+- Use nomes de eventos descritivos que façam sentido para seus clientes
+- Mantenha apenas campos padrão e o campo de telefone opcional
+- Sempre inclua email do cliente na criação de leads para convites de calendário
+
+## Testes
+
+Após a configuração, recomendamos:
+
+1. Fazer uma chamada de teste para seu assistente de IA
+2. Solicitar para agendar uma reunião
+3. Verificar se o agendamento aparece no seu painel Cal.com
+4. Verificar se o número de telefone aparece no evento do calendário
+5. Verificar se o cliente recebe o email de convite do calendário
+6. Verificar se os emails de confirmação são recebidos
+
+## Solução de Problemas
+
+Se você encontrar problemas:
+
+- Verifique se sua chave de API está ativa e tem as permissões corretas
+- Certifique-se de que o ID do tipo de evento está correto
+- Verifique se sua disponibilidade no Cal.com está configurada adequadamente
+- Confirme que nenhum campo personalizado obrigatório foi adicionado
+- Verifique se o identificador do campo de telefone é exatamente "phone"
+- Confirme se a variável `email` está configurada adequadamente nas configurações do assistente
+- Verifique se o email do cliente está sendo passado corretamente nos leads
+- Confirme se suas configurações de fuso horário estão corretas

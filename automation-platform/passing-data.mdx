@@ -1,0 +1,108 @@
+---
+title: "Passando Dados"
+icon: "wand-sparkles"
+description: "Usando dados de etapas anteriores na etapa atual"
+---
+
+## Fluxo de dados
+
+Qualquer fluxo é um diagrama vertical que **começa com uma etapa de trigger** seguida por **qualquer número de etapas de ação**.
+
+As etapas são conectadas verticalmente. Os dados fluem das etapas pai para as filhas. As etapas filhas têm acesso aos dados de saída das etapas pai.
+
+## Etapas de Exemplo
+
+<video
+  width="450"
+  autoPlay
+  muted
+  loop
+  playsinline
+  src="/resources/passing-data-3steps.mp4"></video>
+
+Este fluxo tem 3 etapas, elas podem acessar dados da seguinte forma:
+
+- **Etapa 1** é o principal produtor de dados a ser usado nas próximas etapas. Os dados produzidos pela Etapa 1 serão acessíveis nas Etapas 2 e 3. Alguns triggers não produzem dados, como os de Agendamento.
+
+- **Etapa 2** pode acessar dados produzidos pela Etapa 1. Após a execução, esta etapa também produzirá dados para serem usados na(s) próxima(s) etapa(s).
+
+- **Etapa 3** pode acessar dados produzidos pelas Etapas 1 e 2, pois são suas etapas pai. Esta etapa pode produzir dados, mas como é a última etapa no fluxo, não pode ser usada por outras.
+
+## Painel de Dados para Inserir
+
+Para usar dados de uma etapa anterior em sua etapa atual, coloque seu cursor em qualquer entrada, o painel **Dados para Inserir** aparecerá.
+
+<video
+  autoPlay
+  muted
+  loop
+  playsinline
+  src="/resources/passing-data-data-to-insert-panel.mp4"></video>
+
+Este painel mostra as etapas acessíveis e seus dados. Você pode expandir os itens de dados para visualizar seu conteúdo, e pode clicar nos itens para inseri-los na entrada de suas configurações atuais.
+
+Se um item neste painel tiver um cursor (⌄) à direita, significa que você pode clicar no item para expandir suas propriedades filhas. Você pode selecionar o item pai ou suas propriedades conforme necessário.
+
+Quando você insere dados deste painel, eles são inseridos na posição do cursor na entrada. Isso significa que você pode combinar texto estático e dados dinâmicos em qualquer campo.
+
+<video
+  autoPlay
+  muted
+  loop
+  playsinline
+  src="/resources/passing-data-main-insert-data-example.mp4"></video>
+
+Geralmente recomendamos que você expanda os itens antes de inseri-los para entender o tipo de dados que eles contêm e se são adequados para a entrada que você está preenchendo.
+
+## Testando Etapas para Gerar Dados
+
+Exigimos que você teste as etapas antes de acessar seus dados. Esta abordagem protege você de selecionar os dados errados e quebrar seus fluxos após publicá-los.
+
+Se uma etapa não foi testada e você tenta acessar seus dados, verá a seguinte mensagem:
+
+<img
+  width="350"
+  src="/resources/passing-data-test-step-first.png"
+  alt="Teste sua etapa de automação primeiro"
+/>
+
+Para corrigir isso, vá para a etapa e use o painel Gerar Dados de Exemplo para testá-la. As etapas usam diferentes abordagens para teste. Estas são as comuns:
+
+- **Carregar Dados:** Alguns triggers permitirão que você carregue dados de sua conta conectada sem ter que realizar nenhuma ação nessa conta.
+- **Testar Trigger:** Alguns triggers exigirão que você vá para sua conta conectada e dispare o trigger para gerar dados de exemplo.
+- **Enviar Dados:** Webhooks exigem que você envie uma solicitação de exemplo para a URL do webhook para gerar dados de exemplo.
+- **Testar Ação:** Etapas de ação permitirão que você execute a ação para gerar dados de exemplo.
+
+Siga as instruções no painel Gerar Dados de Exemplo para saber como sua etapa deve ser testada. Alguns triggers também permitirão que você Use Dados Fictícios, que gerará dados de exemplo estáticos do componente. Recomendamos que você teste a etapa em vez de usar dados fictícios.
+
+Este é um exemplo para gerar dados de exemplo para um trigger usando o botão **Carregar Dados**:
+
+<video
+  autoPlay
+  muted
+  loop
+  playsinline
+  src="/resources/passing-data-load-data.mp4"></video>
+
+## Dicas Avançadas
+
+### Alternando para Valores Dinâmicos
+
+Dropdowns e alguns outros tipos de entrada não permitem que você selecione dados de etapas anteriores. Se você quiser contornar isso e usar dados de etapas anteriores, mude a entrada para uma dinâmica usando este botão:
+
+<video
+  autoPlay
+  muted
+  loop
+  playsinline
+  src="/resources/passing-data-dynamic-value.mp4"></video>
+
+### Acessando dados por caminho
+
+Se você não consegue encontrar os dados que está procurando no painel **Dados para Inserir** mas gostaria de usá-los, pode escrever um caminho JSON em vez disso.
+
+Use a seguinte sintaxe para escrever caminhos JSON:
+
+`{{step_slug.path.to.property}}`
+
+O `step_slug` pode ser encontrado movendo seu cursor sobre qualquer uma das etapas do seu fluxo, ele será mostrado à direita da etapa.

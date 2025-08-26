@@ -1,0 +1,131 @@
+---
+title: "Ferramenta Autocalls"
+icon: "phone"
+description: "Aprenda como usar triggers e ações do Autocalls em seus fluxos de chamadas de IA"
+---
+
+# Ferramenta Autocalls
+
+A ferramenta Autocalls é o componente principal que conecta seu sistema de chamadas de IA com fluxos de automação. Ela permite troca de dados em tempo real entre seus assistentes de IA e sistemas de negócio, possibilitando conversas personalizadas e acompanhamentos automatizados.
+
+<Note>
+  Você pode encontrar a ferramenta Autocalls exibida proeminentemente no topo da
+  barra lateral de busca ao procurar por triggers ou ações.
+</Note>
+
+## Triggers
+
+### Chamada Finalizada
+
+![Autocalls Call Ended Trigger](/resources/autocalls-trigger.jpg)
+
+O trigger de Chamada Finalizada ativa imediatamente após uma chamada de IA ser concluída, fornecendo dados abrangentes sobre a interação:
+
+- Transcrição completa da conversa com timestamps
+- Respostas e decisões do assistente de IA
+- Duração da chamada e metadados técnicos
+- Informações do cliente e número de telefone
+- Resultado da chamada e análise de sentimento
+- Variáveis definidas durante a conversa
+
+#### Configuração
+
+1. Selecione "Chamada Finalizada" como seu trigger
+2. Escolha o assistente de IA específico para monitorar
+3. Configure o mapeamento de variáveis
+
+### Injeção de Variáveis para Chamadas Recebidas
+
+Este poderoso trigger ativa antes do seu assistente de IA atender uma chamada recebida, permitindo que você:
+
+- Busque e injete dados do cliente em tempo real
+- Personalize o comportamento da IA baseado no contexto
+- Defina parâmetros de conversa
+- Configure características de personalidade da IA
+- Forneça variáveis de lógica de negócio
+
+#### Configuração
+
+1. Selecione "Chamada Recebida" como seu trigger
+2. Defina variáveis necessárias para o contexto da IA
+
+## Ações
+
+### Adicionar Lead à Campanha
+
+![Autocalls Action](/resources/autocalls-action.jpg)
+
+Esta ação ajuda a gerenciar suas campanhas de chamadas de IA através de:
+
+- Criação de novos leads de ferramentas externas como Planilhas, Hubspot, leads do Facebook
+- Atribuição de leads a campanhas de IA específicas
+- Adição de contexto para chamadas futuras
+
+#### Configuração
+
+1. Selecione a campanha de IA de destino
+2. Mapeie detalhes de contato dos dados do trigger
+3. Adicione atributos personalizados para contexto da IA
+
+### Retornar Variáveis
+
+Esta ação é crucial para chamadas recebidas, retornando contexto que é injetado no prompt da IA:
+
+- Perfil e preferências do cliente
+- Resumo do histórico de conversas
+- Regras de negócio e restrições
+- Flags de comportamento personalizadas da IA
+- Templates de resposta dinâmicas
+
+#### Configuração
+
+1. Estruture o JSON de resposta
+2. Mapeie dados do cliente para variáveis
+3. Configure parâmetros de conversa da IA
+4. Configure tratamento de timeout
+
+## Exemplos de Uso
+
+### Gerenciamento de Leads Pós-Chamada
+
+```javascript
+Trigger: Chamada de IA Finalizada
+↓
+Extrair insights da conversa
+↓
+Atualizar registro no Hubspot
+↓
+Adicionar à campanha de acompanhamento se qualificado
+```
+
+### Roteamento Inteligente de Chamadas Recebidas
+
+```javascript
+Trigger: Chamada Recebida para IA
+↓
+Buscar perfil do cliente no CRM
+↓
+Obter histórico de interações
+↓
+Retornar contexto enriquecido para prompt da IA
+```
+
+## Melhores Práticas
+
+1. **Performance de Injeção de Variáveis**
+
+   - Mantenha o processamento abaixo de 2 segundos
+   - Configure valores padrão sensatos
+
+2. **Estrutura de Dados**
+
+   - Siga os requisitos do prompt da IA
+   - Valide todas as variáveis
+   - Estruture objetos aninhados claramente
+   - documente campos personalizados
+
+3. **Tratamento de Erros**
+   - Forneça valores de fallback
+   - Registre falhas de injeção
+   - Monitore tempos de resposta
+   - Trate dados ausentes com elegância

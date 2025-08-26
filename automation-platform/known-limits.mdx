@@ -1,0 +1,25 @@
+---
+title: "Limites técnicos"
+icon: "ban"
+description: "Limites técnicos para execução de fluxos"
+---
+
+### Visão Geral
+
+### Limites de Fluxo
+
+- **Tempo de Execução**: Cada fluxo tem um tempo máximo de execução de **600 segundos (10 minutos)**. Fluxos que excedem este limite serão marcados como timeout.
+- **Uso de Memória**: Durante a execução, um fluxo não deve usar mais de **128 MB de RAM**.
+
+### Limites de Armazenamento de Arquivos
+
+- **Tamanho Máximo do Arquivo**: 10 MB
+
+### Limites de Armazenamento de Dados
+
+Alguns componentes utilizam o armazenamento de chave integrado, como o Componente de Armazenamento e Componente de Fila.
+
+Os limites de armazenamento são os seguintes:
+
+- **Comprimento Máximo da Chave**: 128 caracteres
+- **Tamanho Máximo do Valor**: 512 KB

@@ -1,0 +1,79 @@
+---
+title: "Recursos de SMS"
+icon: "message-sms"
+description: "Aprenda sobre recursos de SMS, requisitos e preços para seus números de telefone"
+---
+
+<Card
+  title="Documentação Detalhada de SMS"
+  icon="book-open"
+  href="/automation-platform/calls-related/sms-capabilities">
+  Esta é uma visão geral dos recursos de SMS. Para instruções detalhadas sobre
+  envio de SMS através de fluxos de automação, consulte nossa [Documentação da Plataforma
+  de Automação](/automation-platform/calls-related/sms-capabilities).
+</Card>
+
+## Requisitos
+
+Para enviar mensagens SMS, você precisa de:
+
+- Um número de telefone capaz de SMS
+- Créditos suficientes em sua conta
+- Configuração adequada do fluxo de automação
+
+## Segmentos de SMS
+
+Mensagens SMS são divididas em segmentos:
+
+- Cada segmento tem 160 caracteres para texto ASCII padrão
+- Ou 70 caracteres para Unicode (caracteres especiais, emojis)
+- Mensagens mais longas são automaticamente divididas em múltiplos segmentos
+- Você é cobrado por segmento enviado
+
+Por exemplo:
+
+- "Olá! Como vai você?" (18 chars) = 1 segmento
+- Uma mensagem com 200 caracteres ASCII = 2 segmentos
+- Uma mensagem com emojis e 100 caracteres = 2 segmentos
+
+## Custos
+
+Os preços de SMS variam por:
+
+- País de destino
+- Número de segmentos
+- Tipo de conteúdo (padrão/unicode)
+
+## Monitoramento e Histórico
+
+Rastreie sua atividade de SMS no painel:
+
+- Status de entrega
+- Carimbo de data/hora
+- Número de segmentos
+- Custo por mensagem
+- Detalhes do destinatário
+- Prévia do conteúdo
+
+## Melhores Práticas
+
+1. **Comprimento da Mensagem**
+
+   - Mantenha mensagens concisas
+   - Monitore a contagem de segmentos
+   - Use caracteres padrão quando possível
+
+2. **Conformidade**
+
+   - Inclua instruções de cancelamento
+   - Siga as regulamentações locais
+   - Respeite horários de silêncio
+
+3. **Teste**
+   - Verifique as capacidades do número
+   - Teste entrega para diferentes operadoras
+   - Monitore taxas de entrega
+
+---
+
+**Quer começar a enviar SMS?** Consulte nossa [documentação da plataforma de automação](/automation-platform/calls-related/sms-capabilities) para aprender como configurar fluxos de trabalho de SMS.
