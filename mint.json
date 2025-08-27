@@ -16,7 +16,7 @@
     }
   },
   "topAnchor": {
-    "name": "Platform Guide",
+    "name": "Guia da Plataforma",
     "icon": "book"
   },
   "sidebar": {
@@ -24,38 +24,38 @@
   },
   "topbarLinks": [{
     "name": "Home",
-    "url": "https://clinicalls.ai"
+    "url": "https://clinicalls.com.br"
   }, {
-    "name": "Support",
-    "url": "https://clinicalls.ai/contact"
+    "name": "Suporte",
+    "url": "https://wa.me/5551989769026"
   }],
   "topbarCtaButton": {
     "name": "Dashboard",
-    "url": "https://app.clinicalls.ai"
+    "url": "https://app.clinicalls.com.br"
   },
   "anchors": [{
-    "name": "No-Code Automation",
+    "name": "Automações sem Código",
     "icon": "wand-magic-sparkles",
     "color": "#6c63ff",
     "url": "automation-platform"
   }],
   "navigation": [{
-      "group": "Introduction",
+      "group": "Introdução",
       "pages": [
-        "introduction/what-is-clinicalls",
+        "introduction/what-is-autocalls",
         "introduction/how-it-works",
         "introduction/key-terminology"
       ]
     },
     {
-      "group": "Getting Started",
+      "group": "Iniciando",
       "pages": [
         "getting-started/core-concepts",
         "getting-started/understanding-billing"
       ]
     },
     {
-      "group": "AI Assistants Overview",
+      "group": "Sobre os assistentes de IA",
       "pages": [
         "ai-assistants/what-is-ai-assistant",
         "ai-assistants/system-prompt",
@@ -69,7 +69,7 @@
       ]
     },
     {
-      "group": "Phone Numbers",
+      "group": "Números de Telefone",
       "pages": [
         "phone-numbers/types",
         "phone-numbers/purchasing-and-managing",
@@ -79,7 +79,7 @@
       ]
     },
     {
-      "group": "Inbound Calls",
+      "group": "Ligações de Entrada",
       "pages": [
         "inbound-calls/overview",
         "inbound-calls/provisioning",
@@ -88,7 +88,7 @@
       ]
     },
     {
-      "group": "Outbound Calls",
+      "group": "Ligações de Saída",
       "pages": [
         "outbound-calls/overview",
         "outbound-calls/campaigns",
@@ -99,7 +99,7 @@
       ]
     },
     {
-      "group": "AI Prompting & Conversation Design",
+      "group": "Dicas de Prompt",
       "pages": [
         "conversation-design/prompt-basics",
         "conversation-design/knowledge-bases",
@@ -108,7 +108,7 @@
       ]
     },
     {
-      "group": "Automation & Integrations",
+      "group": "Automações e Integrações",
       "pages": [
         "automation/overview",
         "automation/webhook-api",
@@ -116,7 +116,7 @@
       ]
     },
     {
-      "group": "Costs & Pricing",
+      "group": "Custos e Valores",
       "pages": [
         "pricing/overview",
         "pricing/usage-based",
@@ -124,22 +124,15 @@
       ]
     },
     {
-      "group": "Number Provisioning",
+      "group": "Números de Telefone",
       "pages": [
         "provisioning/supported-countries",
         "provisioning/managing-numbers"
       ]
     },
+  
     {
-      "group": "White Label Program",
-      "pages": [
-        "white-label/overview",
-        "white-label/onboarding",
-        "white-label/plans-setup"
-      ]
-    },
-    {
-      "group": "Troubleshooting & FAQs",
+      "group": "Problemas",
       "pages": [
         "troubleshooting/voice-problems",
         "troubleshooting/billing",
@@ -147,17 +140,9 @@
         "troubleshooting/ai-behavior"
       ]
     },
+    
     {
-      "group": "API Reference",
-      "pages": [
-        "api-reference/introduction",
-        "api-reference/authentication",
-        "api-reference/leads/create",
-        "api-reference/campaigns/index"
-      ]
-    },
-    {
-      "group": "No-Code Automation platform",
+      "group": "Plataforma de Automação sem Código",
       "pages": [
         "automation-platform/introduction",
         "automation-platform/building-flows",
@@ -169,29 +154,20 @@
       ]
     },
     {
-      "group": "Calls Related",
+      "group": "Sobre as Ligações",
       "pages": [
-        "automation-platform/calls-related/clinicalls-tool",
+        "automation-platform/calls-related/autocalls-tool",
         "automation-platform/calls-related/common-integrations",
         "automation-platform/calls-related/sms-capabilities"
       ]
     },
     {
-      "group": "Tutorials",
+      "group": "Tutoriais",
       "pages": [
         "automation-platform/tutorials/outbound-form-call",
         "automation-platform/tutorials/inbound-context-injection"
 
       ]
     }
-  ],
-  "footerSocials": {
-    "linkedin": "https://www.linkedin.com/company/clinicalls-ai"
-  },
-  "api": {
-    "baseUrl": "https://app.clinicalls.ai/api/",
-    "auth": {
-      "method": "bearer"
-    }
-  }
+  ]
 }
