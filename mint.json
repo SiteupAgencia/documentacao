@@ -22,24 +22,30 @@
   "sidebar": {
     "items": "card"
   },
-  "topbarLinks": [{
-    "name": "Home",
-    "url": "https://clinicalls.com.br"
-  }, {
-    "name": "Suporte",
-    "url": "https://wa.me/5551989769026"
-  }],
+  "topbarLinks": [
+    {
+      "name": "Home",
+      "url": "https://clinicalls.com.br"
+    },
+    {
+      "name": "Suporte",
+      "url": "https://wa.me/5551989769026"
+    }
+  ],
   "topbarCtaButton": {
     "name": "Dashboard",
     "url": "https://app.clinicalls.com.br"
   },
-  "anchors": [{
-    "name": "Automações sem Código",
-    "icon": "wand-magic-sparkles",
-    "color": "#6c63ff",
-    "url": "automation-platform"
-  }],
-  "navigation": [{
+  "anchors": [
+    {
+      "name": "Automações sem Código",
+      "icon": "wand-magic-sparkles",
+      "color": "#6c63ff",
+      "url": "automation-platform"
+    }
+  ],
+  "navigation": [
+    {
       "group": "Introdução",
       "pages": [
         "introduction/what-is-autocalls",
@@ -116,22 +122,6 @@
       ]
     },
     {
-      "group": "Custos e Valores",
-      "pages": [
-        "pricing/overview",
-        "pricing/usage-based",
-        "pricing/number-rentals"
-      ]
-    },
-    {
-      "group": "Números de Telefone",
-      "pages": [
-        "provisioning/supported-countries",
-        "provisioning/managing-numbers"
-      ]
-    },
-  
-    {
       "group": "Problemas",
       "pages": [
         "troubleshooting/voice-problems",
@@ -140,7 +130,6 @@
         "troubleshooting/ai-behavior"
       ]
     },
-    
     {
       "group": "Plataforma de Automação sem Código",
       "pages": [
@@ -166,7 +155,6 @@
       "pages": [
         "automation-platform/tutorials/outbound-form-call",
         "automation-platform/tutorials/inbound-context-injection"
-
       ]
     }
   ]
